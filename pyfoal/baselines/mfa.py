@@ -63,8 +63,6 @@ def from_files_to_files(
 
     # Download english dictionary and acoustic model
     manager = mfa.models.ModelManager()
-    manager.download_model('dictionary', 'english_mfa')
-    manager.download_model('acoustic', 'english_mfa')
 
     with tempfile.TemporaryDirectory() as directory:
         directory = Path(directory)
@@ -83,8 +81,8 @@ def from_files_to_files(
             # Setup aligner
             aligner = mfa.alignment.PretrainedAligner(
                 corpus_directory=str(directory),
-                dictionary_path='english_mfa',
-                acoustic_model_path='english_mfa',
+                dictionary_path='large_pinyin_dictionary.dict',
+                acoustic_model_path='large_pinyin_acoustic.zip',
                 num_jobs=num_workers,
                 debug=False,
                 verbose=False)
