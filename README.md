@@ -9,6 +9,8 @@
 
 </div>
 
+Forked, for use with [lars76/forced-alignment-chinese](https://github.com/lars76/forced-alignment-chinese)
+
 Forced alignment suite. Includes English grapheme-to-phoneme (G2P) and
 phoneme alignment from the following forced alignment tools.
  - RAD-TTS [1]
